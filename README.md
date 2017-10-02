@@ -21,6 +21,6 @@ Increase the resolution to raise the number of holes that will be carved.
 
 ![](examples/abe-100.png)
 
-The carved result of running Halftone on the above image at a resolution of 100.
+The carved result of running Halftone on the above image at a resolution of 100. This carve used a 1/16" bit, so any holes smaller than that were skipped.
 
 ![](examples/abe-100-carved.jpg)
