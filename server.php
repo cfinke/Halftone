@@ -4,9 +4,9 @@ require( "./config.php" ); // Defines API_KEY
 
 header( "Access-Control-Allow-Origin: *" );
 
-if ( empty( $_POST['api_key'] ) || API_KEY != $_POST['api_key'] ) {
-	die( json_encode( array( 'error' => 'Invalid API key.' ) ) );
-}
+// if ( empty( $_POST['api_key'] ) || API_KEY != $_POST['api_key'] ) {
+//	die( json_encode( array( 'error' => 'Invalid API key.' ) ) );
+//}
 
 if ( empty( $_POST['image'] ) || 'undefined' === $_POST['image'] ) {
 	die( json_encode( array( 'error' => 'Missing image.' ) ) );
