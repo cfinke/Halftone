@@ -114,8 +114,5 @@ var executor = function(args, success, failure) {
 	request_params += "&resolution=" + encodeURIComponent(params.Resolution);
 	request_params += "&image=" + encodeURIComponent(params.Image);
 
-	// Defined in config.private.js, a dependency.
-	// request_params += "&api_key=" + API_KEY;
-
 	req.send(request_params);
 };
