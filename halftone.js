@@ -1,3 +1,5 @@
+var timeout = null;
+
 var properties = function () {
 	return [
 		{type: 'file-input', id: "Image" },
@@ -6,7 +8,15 @@ var properties = function () {
 	];
 };
 
-var executor = function(args, success, failure) {
+var executor = function (args, success, failure) {
+	clearTimeout(timeout);
+
+	timeout = setTimeout(function () {
+		executor2(args, success, failure);
+	}, 500);
+}
+
+var executor2 = function (args, success, failure) {
 	var params = args.params;
 
 	// executor() gets called as soon as the app loads, but there will be nothing to do.
